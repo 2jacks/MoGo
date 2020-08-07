@@ -13989,6 +13989,9 @@ body.lock {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     overflow: auto;
     position: fixed;
     top: 0;
