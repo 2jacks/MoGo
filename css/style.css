@@ -14675,3 +14675,13 @@ body.lock {
     border-color: #dee2e6;
   }
 }
+
+@media (orientation: landscape) {
+  .hero {
+    height: auto;
+  }
+
+  .hero__screen {
+    margin: 120px auto 70px auto;
+  }
+}
