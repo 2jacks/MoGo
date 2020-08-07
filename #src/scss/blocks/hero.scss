@@ -5,9 +5,6 @@
   background-size: cover;
 
   position: relative;
-  @media (max-width: 575.98px) {
-    height: auto;
-  }
   &__mask {
     position: absolute;
     top: 0;
@@ -23,11 +20,8 @@
   &__screen {
     position: relative;
     z-index: 100;
+    margin: auto;
 
-    padding-top: 160px;
-    @media (max-width: 991.98px) {
-      padding-top: 100px;
-    }
   }
   &__small {
     @include decor-text();

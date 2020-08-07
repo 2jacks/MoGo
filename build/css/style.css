@@ -7895,7 +7895,7 @@ body.lock {
 .hero__screen {
   position: relative;
   z-index: 100;
-  padding-top: 160px;
+  margin: auto;
 }
 
 .hero__small {
@@ -14005,10 +14005,6 @@ body.lock {
     right: 0;
   }
 
-  .hero__screen {
-    padding-top: 100px;
-  }
-
   .hero__small {
     font-size: 54px;
     margin-bottom: 35px;
@@ -14390,10 +14386,6 @@ body.lock {
 
   .nav {
     padding-right: 20px;
-  }
-
-  .hero {
-    height: auto;
   }
 
   .hero__small {
