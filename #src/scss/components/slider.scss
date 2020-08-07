@@ -1,0 +1,52 @@
+.slider {
+  position: relative;
+  .slick {
+    /* Common class for arrows */
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      /* Clean default styles */
+      border: 0;
+      font-size: 0;
+    }
+    &-prev {
+      background: url('../img/arrow-prev.png')center no-repeat;
+      background-size: cover;
+      left: 0;
+    }
+    &-next {
+      background: url('../img/arrow-next.png') center no-repeat;
+      background-size: 100%;
+      right: 0;
+    }
+
+
+    /* All dots wrapper */
+    &-dots {
+      list-style: none;
+
+      display: flex;
+      /* One dot wrapper */
+      li {
+        margin: 0 10px 0 0;
+        /* Decorating dots */
+        button {
+          font-size: 0;
+          border: 0;
+
+          width: 8px;
+          height: 8px;
+          background-color: #C6CACC;
+          border-radius: 2px;
+        }
+      }
+    }
+
+  }
+}

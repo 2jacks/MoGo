@@ -1,0 +1,18 @@
+
+.logo {
+  @include attention-text();
+  &:hover {
+    text-decoration: none;
+  }
+  &--header {
+    font-size: 30px;
+    color: #fff;
+  }
+  &--footer {
+    font-size: 46px;
+    color: $c--plain-text;
+    &:hover {
+      color: $c--plain-text;
+    }
+  }
+}

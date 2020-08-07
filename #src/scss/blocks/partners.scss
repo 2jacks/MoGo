@@ -1,0 +1,23 @@
+.partners {
+  background-color: #f8f8f8;
+
+  padding: 60px 0;
+  @include media-breakpoint-down(md) {
+    padding: 45px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 20px 0;
+  }
+  &__wrapper {
+    align-items: center;
+  }
+  &__item {
+    img {
+      object-fit: cover;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+
+  }
+}

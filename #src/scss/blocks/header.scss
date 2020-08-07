@@ -1,0 +1,167 @@
+/*======================Header======================*/
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    background-color: $c--red;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+  &.fixed {
+    &:before {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 991.98px) {
+    padding-top: 0;
+    height: 50px;
+    &:before {
+      display: block;
+      height: 50px;
+      opacity: 1;
+    }
+  }
+  &__inner {
+    align-items: center;
+    height: 70px;
+    @media (max-width: 991.98px) {
+      align-items: center;
+      height: 50px;
+    }
+  }
+  &__logo {
+    position: relative;
+    bottom: 0;
+    z-index: 100;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  transition: all .3s linear;
+  position: relative;
+  z-index: 100;
+  &__item {
+    @include sub-text();
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .2s linear;
+
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 100%;
+
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      background-color: $c--yellow;
+      transition: all .1s linear;
+      transform: scale(0);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $c--yellow;
+      &:after {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  &__icon {
+    position: relative;
+    svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+      transition:all .2s linear;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 3px solid $c--yellow;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity .2s linear;
+    }
+    &:hover {
+      svg {
+        fill: $c--yellow;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 991.98px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: auto;
+
+    position: fixed;
+    top: 50px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    padding: 20px 80px 0 0;
+    background-color: $c--red;
+    &.active {
+      right: 0;
+    }
+  }
+  @media (max-width: 575.98px) {
+    padding-right: 20px;
+  }
+}

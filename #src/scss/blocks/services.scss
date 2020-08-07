@@ -1,0 +1,58 @@
+.services {
+  padding-top: $pt--section-lg;
+  padding-bottom: 70px;
+  @include media-breakpoint-down(md) {
+    padding-top: $pt--section-md;
+    padding-bottom: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: $pt--section-sm;
+    padding-bottom: 10px;
+  }
+
+  &__row {
+    padding: 50px 0 5px 0;
+    @include media-breakpoint-down(md) {
+      padding: 30px 0 10px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0 0 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 45px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+  &__icon {
+    display: block;
+
+    flex: 0 0 32px;
+    height: 32px;
+
+    fill: $c--aqua;
+
+    margin-right: 25px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  &__title {
+    @include sub-text();
+    font-size: 14px;
+    color: $c--black;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+  }
+  &__text {
+    @include plain-text();
+
+  }
+}

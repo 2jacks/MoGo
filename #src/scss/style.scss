@@ -1,0 +1,30 @@
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-reboot";
+@import "slick";
+
+@import "settings";
+@import "vars";
+@import "fonts";
+
+@import "components/logo";
+@import "components/buttons";
+@import "components/pseudo-burger";
+@import "components/section-header";
+@import "components/slider";
+
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/stat";
+@import "blocks/services";
+@import "blocks/design";
+@import "blocks/wedo";
+@import "blocks/first-reviews";
+@import "blocks/team";
+@import "blocks/partners";
+@import "blocks/works";
+@import "blocks/second-reviews";
+@import "blocks/clients";
+@import "blocks/blog";
+@import "blocks/map";
+@import "blocks/footer";

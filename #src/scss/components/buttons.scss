@@ -1,0 +1,17 @@
+.button {
+  @include attention-text();
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+
+  padding: .8em 2em;
+  @media (max-width: 575.98px) {
+    font-size: 12px;
+  }
+  &--footer {
+    background-color: $c--aqua;
+    height: 40px;
+    padding: 0 2em 0 2em;
+    border: none;
+  }
+}

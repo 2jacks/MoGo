@@ -1,0 +1,139 @@
+.team {
+  @include section-padding();
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      z-index: 10;
+
+      width: calc(100% - 30px);
+      height: 100%;
+      background-color: $c--aqua;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+  }
+  &__info {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+
+    transition: transform .1s linear;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+
+      opacity: 1;
+      transition: opacity .1s linear;
+    }
+    @include  media-breakpoint-up(md) {
+      &:hover {
+        transform: translate(-15px, -15px);
+        background: linear-gradient(0deg, $c--red, $c--yellow);
+        img {
+          opacity: .1;
+        }
+        .team__social {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+  &__social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity .1s linear;
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      opacity: 1;
+      align-items: flex-end;
+    }
+    &-item {
+      position: relative;
+      width: 56px;
+      height: 56px;
+
+      border-right: 1px solid $c--red;
+      background-color: $c--yellow;
+      transition: background-color .1s linear;
+      &:last-child {
+        border-right: 0;
+      }
+      &:hover {
+        background-color: $c--red;
+        & .team__social-icon {
+          fill: #fff;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        width: 25%;
+      }
+    }
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 27px;
+      height: 27px;
+
+      fill: $c--red;
+      transition: fill .1s linear;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+    position: relative;
+    z-index: 100;
+    width: 100%;
+
+    background-color: #fff;
+  }
+  &__member {
+    @include sub-text();
+    font-size: 14px;
+    color: $c--black;
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+  }
+  &__position {
+    @include speech-text();
+    font-size: 14px;
+    color: $c--plain-text;
+
+  }
+}

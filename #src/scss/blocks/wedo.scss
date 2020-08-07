@@ -1,0 +1,101 @@
+.wedo {
+  @include section-padding();
+  overflow: hidden;
+  &__images {
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      z-index: 0;
+      opacity: 0;
+      transition: all .2s linear;
+      &.on-top {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+  &__collapse {
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 15px;
+    cursor: pointer;
+    &.active {
+      .wedo__arrow {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding: 10px;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    fill: $c--aqua;
+
+    margin-right: 15px;
+  }
+  &__title {
+    @include sub-text();
+    font-size: 14px;
+    color: $c--black;
+    text-transform: uppercase;
+
+  }
+  &__arrow {
+    display: block;
+    width: 21px;
+    height: 12px;
+    fill: #d0d0d0;
+
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s linear;
+  }
+  &__text {
+    @include speech-text();
+    font-size: 15px;
+    color: $c--plain-text;
+
+    padding: 15px;
+    border-top: 1px solid #e5e5e5;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
