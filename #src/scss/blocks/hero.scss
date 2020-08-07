@@ -5,6 +5,9 @@
   background-size: cover;
 
   position: relative;
+  @media (orientation:landscape) {
+    height: auto;
+  }
   &__mask {
     position: absolute;
     top: 0;
@@ -21,6 +24,9 @@
     position: relative;
     z-index: 100;
     margin: auto;
+    @media (orientation:landscape) {
+      margin: 120px auto 70px auto;
+    }
 
   }
   &__small {
