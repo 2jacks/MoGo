@@ -7784,6 +7784,7 @@ body.lock {
   transition: all .3s linear;
   position: relative;
   z-index: 100;
+  overflow: auto;
 }
 
 .nav__item {
@@ -13990,7 +13991,6 @@ body.lock {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    overflow: auto;
     position: fixed;
     top: 50px;
     right: -100%;

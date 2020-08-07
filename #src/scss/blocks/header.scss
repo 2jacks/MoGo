@@ -66,6 +66,7 @@ body {
   transition: all .3s linear;
   position: relative;
   z-index: 100;
+  overflow: auto;
   &__item {
     @include sub-text();
     font-size: 14px;
@@ -146,7 +147,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    overflow: auto;
 
     position: fixed;
     top: 50px;
